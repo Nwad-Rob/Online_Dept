@@ -6,13 +6,14 @@ product_id int primary key auto_increment,
 product_name varchar (255),
 selling_price int,
 available_quantity int,
-category varchar (255) foreign key REFERENCES item(category)
 );
 
 CREATE TABLE item(
-item_name varchar (255),
-category varchar(255) primary key,
+item_id int primary key auto_increment,
+item_name varchar (255) unique,
+category varchar(255),
 buying_price int 
+item_id int  foreign key REFERENCES product(product_id)
 );
 
 
@@ -33,4 +34,6 @@ insert into product(product_name,selling price,available_quantity)values('Radio'
 insert into product(product_name,selling price,available_quantity)values('Pencils',0.5*buying_price,20, 'Stationary');
 insert into product(product_name,selling price,available_quantity)values('Spinash',0.5*buying_price,12,'Vegetable');
 insert into product(product_name,selling price,available_quantity)values('Hand Soap',0.5*buying_price,13,'Toiletry');
+
+
 

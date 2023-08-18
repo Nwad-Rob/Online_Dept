@@ -2,7 +2,7 @@ package com.training.Model;
 import java.util.*;
 import java.util.Objects;
 
-public class Item {
+public class Item extends Product {
     private String itemName;
     private String category;
     private double buyingPrice;
