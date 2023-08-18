@@ -13,6 +13,6 @@ public class AdminDAO {
         prodlist = new ArrayList<>();
     }
     public void displayProductList(){
-          
+        
     }
 }
