@@ -1,7 +1,7 @@
 package com.training.Model;
 import java.util.*;
 
-public class Product {
+public class Product extends Item{
     private int productId;
     private String productName;
     private double sellingPrice;
