@@ -22,15 +22,40 @@ public class AdminDAO {
         PreparedStatement preparedStatement = connection.preparedStatement(sql);
         ResultSet rs = preparedStatement.executeQuery();
         while (rs.next()){
-            Product product = new Product(rs.get)
+            Product product = new Product(rs.getInt("product_id"),
+            rs.getString("product_name"),
+            rs.getDouble("selling_price"),
+            rs.getInt("available_quantity"));
+            prodlist.add(product);
         }
-    } catch (Exception e) {
-        // TODO: handle exception
+    } catch (SQLException e) {
+        System.out.println(e.getMessage());
     }
+    return prodlist;
     }
-    public void search(List <Product> prodlist){
-        
+
+   //Retrieve a product from the product table, identified by the product id 
+    public Product getProductByid(int id){
+        Connection connection = Connectionutil.getConnection();
+        try {
+            String sql = "SELECT * FROM product WHERE product_id = ?";
+            PreparedStatement preparedStatement = connection.preparedStatement(sql);
+            preparedStatement.setInt(1,id);
+            Result rs = preparedStatement.executeQuery();
+             while (rs.next()){
+            Product product = new Product(rs.getInt("product_id"),
+            rs.getString("product_name"),
+            rs.getDouble("selling_price"),
+            rs.getInt("available_quantity"));
+            return product;
+           }
+        } catch (SQLException e) {
+            System.out.println(e.getmessage());
+        }
+        return null;
     }
+
+    //Retrieve a product from the product table identified by the category
     public void categorizedProduct(List <Product> prodlist){
 
     }
