@@ -1,5 +1,5 @@
 package com.training.util;
 
-public class CustomException {
+public class CustomExceptionn extends Exception {
     
 }

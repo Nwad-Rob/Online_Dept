@@ -20,6 +20,13 @@ public class Product extends Item{
         this.productList = productList;
     }
 
+    public Product(String productName, double sellingPrice, int availableQuantity, Map<Integer, String> productList){
+        this.productName = productName;
+        this.sellingPrice = sellingPrice;
+        this.availableQuantity = availableQuantity;
+        this.productList = productList;
+    }
+
     public int getProductId() {
         return this.productId;
     }

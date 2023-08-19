@@ -12,10 +12,17 @@ public class User {
     public User() {
     }
 
-    public User(String username, String password, int emailId, int superCoins, List<String> userList) {
+    public User(int emailId,String username, String password, int superCoins, List<String> userList) {
+        this.emailId = emailId;
         this.username = username;
         this.password = password;
-        this.emailId = emailId;
+        this.superCoins = superCoins;
+        this.userList = userList;
+    }
+
+    public User(String username, String password, int superCoins, List<String> userList){
+        this.username = username;
+        this.password = password;
         this.superCoins = superCoins;
         this.userList = userList;
     }

@@ -17,6 +17,12 @@ buying_price int
 item_id int  foreign key REFERENCES product(product_id)
 );
 
+Create TABLE adminAccount(
+    email_id int unique,
+    username varchar (255),
+    user_password varchar (255)
+);
+
 
 Create TABLE useraccount(
 email_id int primary key auto_increment,
@@ -47,5 +53,7 @@ insert into item(product_id,item_name,category,buying_price)values(4,'jalepeno P
 insert into item(product_id,item_name,category,buying_price)values(5,'Dawn Papers', 7);
 insert into item(product_id,item_name,category,buying_price)values(5,'Soft papers',5);
 
+
 insert into useraccount(username,user_password,supercoins)values('testuser','password',100);
+insert into adminAccount(email_id,username,user_password)values(1,'Princy','adminuser');
 
