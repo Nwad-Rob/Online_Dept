@@ -3,6 +3,7 @@ import java.util.*;
 import java.util.Objects;
 
 public class Item extends Product {
+    private int itemId;
     private String itemName;
     private String category;
     private double buyingPrice;
@@ -12,11 +13,19 @@ public class Item extends Product {
     public Item() {
     }
 
-    public Item(String itemName, String category, double buyingPrice, List<String> itemList) {
+    public Item(int itemId,String itemName, String category, double buyingPrice, List<String> itemList) {
+        this.itemId = itemId;
         this.itemName = itemName;
         this.category = category;
         this.buyingPrice = buyingPrice;
         this.itemList = itemList;
+    }
+    public int getItemId(){
+        return this.itemId;
+    }
+    
+    public void setItemId(int itemId){
+       this.itemId = itemId;
     }
 
     public String getItemName() {
@@ -89,7 +98,7 @@ public class Item extends Product {
 
     @Override
     public String toString() {
-        return "{" +
+        return "{" + " itemId='" + getItemId() +
             " itemName='" + getItemName() + "'" +
             ", category='" + getCategory() + "'" +
             ", buyingPrice='" + getBuyingPrice() + "'" +
