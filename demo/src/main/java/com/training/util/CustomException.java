@@ -1,5 +1,8 @@
 package com.training.util;
 
-public class CustomExceptionn extends Exception {
-    
+public class CustomException extends Exception {
+    @Override
+    public String getMessage(){
+        return "SQL error occured during the query";
+    }
 }

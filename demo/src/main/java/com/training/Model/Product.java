@@ -27,6 +27,13 @@ public class Product extends Item{
         this.productList = productList;
     }
 
+    public Product(int productId, String productName, double sellingPrice, int availableQuantity) {
+        this.productId = productId;
+        this.productName = productName;
+        this.sellingPrice = sellingPrice;
+        this.availableQuantity = availableQuantity;
+    }
+
     public int getProductId() {
         return this.productId;
     }

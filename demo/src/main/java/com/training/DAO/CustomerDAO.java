@@ -1,4 +1,8 @@
-package DAO;
+package com.training.DAO;
+
+import java.util.*;
+import java.sql.*;
+import com.training.Model.User;
 
 public class CustomerDAO {
     public void login(){

@@ -1,4 +1,4 @@
-package Util;
+package com.training.util;
 
 import org.h2.tools.RunScript;
 
