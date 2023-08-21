@@ -20,11 +20,18 @@ public class User {
         this.userList = userList;
     }
 
-    public User(String username, String password, int superCoins, List<String> userList){
+    public User(String username, String password, int superCoins){
         this.username = username;
         this.password = password;
         this.superCoins = superCoins;
-        this.userList = userList;
+    }
+
+    public User(int emailId,String username, String password, int superCoins){
+        this.emailId = emailId;
+        this.username = username;
+        this.password = password;
+        this.superCoins = superCoins;
+        
     }
 
     public String getUsername() {

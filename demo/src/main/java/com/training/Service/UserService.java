@@ -2,9 +2,9 @@ package com.training.Service;
 
 import com.training.Model.Product;
 import com.training.Model.User;
-import com.training.DAO.CustomerDAO;
+import com.training.DAO.UserDAO;
 
 
-public class CustomerService {
+public class UserService {
     
 }

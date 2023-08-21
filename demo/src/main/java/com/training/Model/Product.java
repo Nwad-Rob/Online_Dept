@@ -4,7 +4,7 @@ import java.util.*;
 public class Product extends Item{
     private int productId;
     private String productName;
-    private double sellingPrice;
+    private float sellingPrice;
     private int availableQuantity;
     private Map<Integer,String> productList;
 
@@ -12,7 +12,7 @@ public class Product extends Item{
     public Product() {
     }
 
-    public Product(int productId, String productName, double sellingPrice, int availableQuantity, Map<Integer, String> productList) {
+    public Product(int productId, String productName, float sellingPrice, int availableQuantity, Map<Integer, String> productList) {
         this.productId = productId;
         this.productName = productName;
         this.sellingPrice = sellingPrice;
@@ -20,15 +20,21 @@ public class Product extends Item{
         this.productList = productList;
     }
 
-    public Product(String productName, double sellingPrice, int availableQuantity, Map<Integer, String> productList){
+    public Product(String productName, float sellingPrice, int availableQuantity, Map<Integer, String> productList){
         this.productName = productName;
         this.sellingPrice = sellingPrice;
         this.availableQuantity = availableQuantity;
         this.productList = productList;
     }
 
-    public Product(int productId, String productName, double sellingPrice, int availableQuantity) {
+    public Product(int productId, String productName, float sellingPrice, int availableQuantity) {
         this.productId = productId;
+        this.productName = productName;
+        this.sellingPrice = sellingPrice;
+        this.availableQuantity = availableQuantity;
+    }
+
+    public Product(String productName, float sellingPrice, int availableQuantity) {
         this.productName = productName;
         this.sellingPrice = sellingPrice;
         this.availableQuantity = availableQuantity;
@@ -50,11 +56,11 @@ public class Product extends Item{
         this.productName = productName;
     }
 
-    public double getSellingPrice() {
+    public float getSellingPrice() {
         return this.sellingPrice;
     }
 
-    public void setSellingPrice(double sellingPrice) {
+    public void setSellingPrice(float sellingPrice) {
         this.sellingPrice = sellingPrice;
     }
 
@@ -84,7 +90,7 @@ public class Product extends Item{
         return this;
     }
 
-    public Product sellingPrice(double sellingPrice) {
+    public Product sellingPrice(float sellingPrice) {
         setSellingPrice(sellingPrice);
         return this;
     }
